@@ -62,7 +62,10 @@
             }
         });
         </script>  </td>
-        <td><script>
+        <td>
+            <div class="s2">Bu ikkinchi chart bo'lib: Type: doughnut, chegara chiziqlarsiz</div>
+            
+            <script>
             const cty = document.getElementById('myChart2').getContext('2d');
             const myChart2 = new Chart(cty, {
                 type: 'doughnut',
@@ -71,23 +74,6 @@
                     datasets: [{
                         label: '# Yilning ikkinchi yarim yilligi natijalari',
                         data: [12, 19, 13, 51, 24, 23],
-                        options: {
-    animations: {
-      tension: {
-        duration: 1000,
-        easing: 'linear',
-        from: 1,
-        to: 0,
-        loop: true
-      }
-    },
-    scales: {
-      y: { // defining min and max so hiding the dataset does not change scale range
-        min: 0,
-        max: 100
-      }
-    }
-  },
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
