@@ -19,7 +19,7 @@
 <body>
     <div class="s1">Bu mening birinchi Chart.js loyiham. Susys jamoasiga omad!!!</div>
   <div> 
-      <canvas id="myChart"></canvas>
+      <canvas id="myChart" ></canvas>
       <canvas id="myChart2"></canvas>
   </div>
   
@@ -70,10 +70,10 @@
             const myChart2 = new Chart(cty, {
                 type: 'doughnut',
                 data: {
-                    labels: ['Iyul', 'Avgust', 'Sentabr', 'Octabr', 'Noyabr', 'December'],
+                    labels: [{% for post in posts %} '{{ post.nomi}}', {% endfor %}],
                     datasets: [{
                         label: '# Yilning ikkinchi yarim yilligi natijalari',
-                        data: [12, 19, 13, 51, 24, 23],
+                        data: [{% for post in posts %} {{ post.daromadi}}, {% endfor %}],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
