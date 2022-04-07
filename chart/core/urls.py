@@ -9,4 +9,5 @@ urlpatterns = [
     path('piechart/', piechart),
     path('bubble/',bubble),
     path('area/', area),
+    path('anny/',anny),
 ]

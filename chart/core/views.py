@@ -42,3 +42,10 @@ def area(request):
         'posts':posts
     }
     return render(request, "area.html",context)
+
+def anny(request):
+    posts=Post.objects.all()
+    context={
+        'posts':posts
+    }
+    return render(request, "any.html",context)
